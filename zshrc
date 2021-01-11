@@ -1,20 +1,20 @@
-# Themes are into ~/.oh-my-zsh/themes/
+# Themes are into ~/.zsh/oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each time
 ZSH_THEME="spaceship"
 
-# Plugin list in ~/.oh-my-zsh/plugins
-plugins=(git git-prompt archlinux nmap systemd) 
+# Plugin list in ~/.zsh/oh-my-zsh/plugins
+plugins=(git git-prompt archlinux nmap systemd)
 
 # Disable oh-my-zsh update
 DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
-source $HOME/.oh-my-zsh/oh-my-zsh.sh
+source $HOME/.zsh/oh-my-zsh/oh-my-zsh.sh
 
 # ZSH history file
 HISTSIZE=100
 SAVEHIST=100
-HISTFILE=~/.config/zsh/.zsh_history
+HISTFILE=~/.zsh_history
 
 # Fancy auto-complete (with vi movement)
 autoload -Uz compinit

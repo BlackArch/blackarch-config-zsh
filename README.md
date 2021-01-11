@@ -10,7 +10,9 @@ BlackArch Linux configuration files for zsh shell.
 
 Copy the following files:
 
-1. `cp -a /usr/share/blackarch/config/zsh/zshrc ~/.zshrc`
+1. `cp -a /usr/share/blackarch/config/zsh/zsh ~/.zsh`
+2. `cp -a /usr/share/blackarch/config/zsh/zshrc ~/.zshrc`
+
 
 ## Get Involved
 
