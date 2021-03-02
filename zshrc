@@ -1,15 +1,14 @@
-# Themes are into ~/.zsh/oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each time
-ZSH_THEME="spaceship"
+# Load colours and then set prompt
+# Prompt preview:
+# [user] [~]
+# >
+autoload -U colors && colors
+PS1="%{$fg[red]%}[%{$fg[yellow]%}$USER%{$fg[red]%}] %{$fg[red]%}[%{$fg[yellow]%}%~%{$fg[red]%}]
+%{$fg[green]%}>%{$reset_color%} "
 
-# Plugin list in ~/.zsh/oh-my-zsh/plugins
-plugins=(git git-prompt archlinux nmap systemd)
-
-# Disable oh-my-zsh update
-DISABLE_UPDATE_PROMPT=true
-DISABLE_AUTO_UPDATE=true
-
-source $HOME/.zsh/oh-my-zsh/oh-my-zsh.sh
+# Load aliases and shortcuts if existent
+[ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 # ZSH history file
 HISTSIZE=100
