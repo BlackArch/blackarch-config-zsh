@@ -3,8 +3,8 @@
 # [user] [~]
 # >
 autoload -U colors && colors
-PS1="%{$fg[red]%}[%{$fg[yellow]%}$USER%{$fg[red]%}] %{$fg[red]%}[%{$fg[yellow]%}%~%{$fg[red]%}]
-%{$fg[green]%}>%{$reset_color%} "
+PS1="%{$fg[cyan]%}[%{$fg[blue]%}$USER%{$fg[cyan]%}] %{$fg[cyan]%}[%{$fg[blue]%}%~%{$fg[cyan]%}]
+%{$fg[white]%}>%{$reset_color%} "
 
 # ZSH history file
 HISTSIZE=100
