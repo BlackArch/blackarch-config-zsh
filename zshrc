@@ -19,4 +19,8 @@ zstyle ':completion:*' format '>>> %d'
 compinit
 _comp_options+=(globdots) # hidden files are included
 
+# Custom keymaps
+zle -N zle-keymap-select
+bindkey "\e[3~" delete-char
 export KEYTIMEOUT=1
+
