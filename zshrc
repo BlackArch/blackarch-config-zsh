@@ -10,7 +10,7 @@ else
   _ba_at="%{$fg[grey]%}%B@%b"
 fi
 PS1="%{$fg[blue]%}%B[%b%{$fg[cyan]%}%n${_ba_at}%{$fg[cyan]%}%m%{$fg[blue]%}%B]-%b%{$fg[blue]%}%B[%b%{$fg[white]%}%~%{$fg[blue]%}%B]%b
- %{$fg[cyan]%}%B>>>%b%{$reset_color%} "
+%{$fg[cyan]%}%B>>>%b%{$reset_color%} "
 unset _ba_at
 
 # ZSH history file
