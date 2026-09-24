@@ -3,8 +3,15 @@
 # [user@hostname]-[~]
 # >>>
 autoload -U colors && colors
-PS1="%{$fg[blue]%}%B[%b%{$fg[cyan]%}%n%{$fg[grey]%}%B@%b%{$fg[cyan]%}%m%{$fg[blue]%}%B]-%b%{$fg[blue]%}%B[%b%{$fg[white]%}%~%{$fg[blue]%}%B]%b
+zmodload -i zsh/terminfo 2>/dev/null
+if (( ${terminfo[colors]:-8} >= 16 )); then
+  _ba_at='%F{8}%B@%b%f'
+else
+  _ba_at="%{$fg[grey]%}%B@%b"
+fi
+PS1="%{$fg[blue]%}%B[%b%{$fg[cyan]%}%n${_ba_at}%{$fg[cyan]%}%m%{$fg[blue]%}%B]-%b%{$fg[blue]%}%B[%b%{$fg[white]%}%~%{$fg[blue]%}%B]%b
 %{$fg[cyan]%}%B>>>%b%{$reset_color%} "
+unset _ba_at
 
 # ZSH history file
 HISTSIZE=100
